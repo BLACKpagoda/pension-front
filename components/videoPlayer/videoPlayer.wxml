@@ -1,0 +1,25 @@
+<!-- components/videoPlayer/videoPlayer.wxml -->
+<!-- 视频图片层 -->
+<view data-id="{{videoData._id}}" class="video-box" style="display: {{ _index == videoData._id ? 'none' : 'block' }};" bindtap="videoPlay">
+  <image class="poster" src="{{videoData.image_url}}" mode="aspectFit"></image>
+  <!-- 视频按钮 -->
+  <image class="playbtn" src="../../images/video/play.png" mode="scaleToFill"></image>
+</view>
+<!-- 视频播放层 -->
+<video src="{{videoData.videoUrl}}" data-id="{{videoData._id}}" class='video' wx:if="{{_index == videoData._id}}" objectFit='contain' autoplay='true' controls></video>
+<view class="down-container">
+  <view class="info-container">
+    <text class="title">{{videoData.title}}</text>
+    <text class="content">{{videoData.content}}</text>
+  </view>
+  <view class="collect-container">
+    <view class="collect" wx:if="{{!(videoData.collect_status)}}" data-id="{{videoData._id}}" bind:tap="doCollect">
+      <image class="collect-img" src="../../images/video/collect.png" />
+      <text class="collect-text">收藏</text>
+    </view>
+    <view class="collect" wx:if="{{videoData.collect_status}}" data-id="{{videoData._id}}" bind:tap="deleteCollect">
+      <image class="collect-img" src="../../images/video/collect@highlight.png" />
+      <text class="collect-text">已收藏</text>
+    </view>
+  </view>
+</view>

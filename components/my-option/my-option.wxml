@@ -1,0 +1,17 @@
+<!--components/my-option/my-option.wxml-->
+<view class="container">
+    <view class="activity-container">
+        <view class="activity" bind:tap="hideColLine">
+            <image class="act-img" src="{{hide?'./images/activity.png':'./images/activity@light.png'}}" />
+            <text class="act-text">活动</text>
+        </view>
+        <view class="act-line" wx:if="{{!hide}}"></view>
+    </view>
+    <view class="collection-container" bind:tap="hideActLine">
+        <view class="collection">
+            <image class="col-img" src="{{!hide?'./images/collection.png':'./images/collection@light.png'}}" />
+            <text class="col-text">收藏</text>
+        </view>
+        <view class="col-line" wx:if="{{hide}}"></view>
+    </view>
+</view>

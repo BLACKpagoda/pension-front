@@ -1,0 +1,31 @@
+<!-- components/activityClass/activityClass.wxml -->
+<view class="container">
+    <view class="class1 {{fix?'':'fix'}}">
+        <view class="recommend {{shadow? 'shadow-class':''}}" bind:tap="shadowActive">
+            <image src="./images/hot.png" class="iconfonts hotIcon" />
+            推荐
+        </view>
+        <view class="classification {{shadow? '':'shadow-class'}}" bind:tap="shadowClassification">
+            分类
+            <image src="./images/class.png" class="iconfonts hotIcon" />
+        </view>
+    </view>
+    <view class="class2" wx:if="{{!fix}}"></view>
+    <!-- <view class="class"></view> -->
+    <view class="classSign">
+        <view class="recommedSign" wx:if="{{shadow}}"></view>
+        <view class="classificationSign" wx:if="{{!shadow}}"></view>
+    </view>
+    <view class="activity">
+        <activity wx:if="{{shadow}}" activitylist="{{activitylist}}" whereactivity="{{whereactivity}}" 
+        address="{{address}}" id="act" />
+        <classification wx:if="{{!shadow}}" />
+        <view class="type">
+            <view class="type-container" wx:if="{{!RorT}}">
+                <block wx:for="{{tagData}}" wx:key="">
+                    <o-type class="type-box" logo="{{item.logo}}" tag="{{item.tag}}"  address="{{address}}" bind:tag="tagNav" whereactivity="actclass"></o-type>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

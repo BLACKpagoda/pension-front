@@ -1,0 +1,49 @@
+<!-- components/search/index.wxml -->
+<view class="container">
+  <view class="header">
+    <view class="search-container">
+      <image class="icon" src="./images/search.png" />
+      <input class="bar" value="{{word}}" type="text" placeholder="课程名称" bind:confirm="onConfirm" placeholder-class="in-bar" auto-focus="{{true}}"></input>
+      <image class="cancel-img" src="./images/cancel.png" bind:tap="onDelete" />
+    </view>
+    <view class="cancel" bind:tap="onCancel">取消</view>
+  </view>
+  <view wx:if="{{!searching}}">
+    <view class="history">
+      <view class="title">
+        <view class="chunk"></view>
+        <text>历史搜索</text>
+      </view>
+      <view class="tags">
+        <block wx:for="{{historywords}}" wx:key="">
+          <o-label text="{{item}}" bind:onPost="onConfirm" />
+        </block>
+      </view>
+    </view>
+    <view class="history hot-search">
+      <view class="title">
+        <view class="chunk"></view>
+        <text>热门搜索</text>
+      </view>
+      <view class="tags">
+        <block wx:for="{{hotWords}}" wx:key="">
+          <o-tag text="{{item}}" bind:onPost="onConfirm" />
+        </block>
+        <!-- <tag-cmp bind:tapping="onConfirm" wx:for="{{hotKeys}}" text="{{item}}" /> -->
+      </view>
+    </view>
+  </view>
+  <view class="course-container" wx:if="{{searching}}">
+    <block wx:for="{{articleData}}" wx:for-item="article" wx:for-index="aindex" wx:key="aindex">
+      <o-course-article wx:if="{{hasCourse}}" article="{{article}}"></o-course-article>
+    </block>
+    <view wx:if="{{hasActivity}}" >
+      <!-- <activity wx:if="{{hasActivity}}" activitylist="{{activitylist}}" whereactivity="search" /> -->
+      <activity wx:if="{{hasActivity}}" whereactivity="search" keyword="{{keyword}}"/>
+    </view>
+
+  </view>
+  <o-loading class="loading-center" wx:if="{{loadingCenter}}" />
+  <o-loading class="loading" wx:if="{{loading}}" />
+  <text wx:if="{{empty}}" class="empty-tip">没有搜索到相关内容</text>
+</view>

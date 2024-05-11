@@ -1,0 +1,4 @@
+<view class="box" bindtap="tage">
+  <image class='img' src="{{logo}}" bind:tap="toType"></image>
+  <text>{{tag}}</text>
+</view>

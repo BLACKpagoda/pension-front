@@ -1,0 +1,52 @@
+/* components/course/course.wxss */
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 688rpx;
+    margin-bottom: 32rpx;
+}
+.image image{
+    border-radius: 30rpx;
+    z-index: 99;
+    width: 260rpx;
+    height: 150rpx;
+    border:2rpx solid #F8FAF9;
+    border-radius: 30rpx;
+}
+.shadow{
+    position: absolute;
+    z-index: -1;
+    background-color: #dbdbdb;
+    width: 244rpx;
+    height: 112rpx;
+    left:56rpx;
+    border-radius: 20rpx;
+}
+
+.content{
+    height: 150rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 40rpx;
+}
+
+.type-title{
+    font-size: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.subTitle{
+    font-size: 30rpx;
+    color:#888888;
+    margin-right:20rpx;
+    margin-top:6rpx
+}
+.down{
+    display: flex;
+    justify-content: flex-end
+}

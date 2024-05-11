@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "o-search-little":"../../components/search-little/search",
+    "o-menu-button":"../../components/menu-button/menu-button",
+    "o-course-article":"../../components/course-article/course-article",
+    "o-search":"../../components/search/index",
+    "o-type":"../../components/type/type",
+    "o-loading":"../../components/loading/loading",
+    "o-video":"../../components/videoPlayer/videoPlayer"
+  },
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark",
+  "onReachBottomDistance":20
+}

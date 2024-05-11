@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "o-course-article": "../course-article/course-article",
+    "o-loading": "../loading/loading",
+    "o-video": "../videoPlayer/videoPlayer"
+  }
+}

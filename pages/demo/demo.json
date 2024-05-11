@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "o-course": "../../components/course/course",
+    "o-act": "../../components/act/act"
+  }
+}

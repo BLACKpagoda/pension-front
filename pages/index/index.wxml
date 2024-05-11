@@ -1,0 +1,62 @@
+<!-- pages/recommend/recommend.wxml -->
+<view class="container" wx:if="{{!searching}}">
+    <view class="box" hidden="{{hidebox}}"></view>
+    <view class="up {{(fixed)?'':'fixed'}}" hidden="{{hide}}">
+        <!-- 搜索 -->
+        <view class="search-container" bind:tap="toSearch">
+            <o-search-little />
+        </view>
+        <!-- 菜单栏 -->
+        <view class="menu-button-container" >
+            <o-menu-button bind:switch="switchType"></o-menu-button>
+        </view>
+    </view>
+    <!-- 课程推荐栏 -->
+    <view class="course-container" wx:if="{{RorT}}">
+        <block wx:for="{{articleData}}" wx:for-item="article" wx:for-index="aindex" wx:key="aindex">
+            <o-course-article article="{{article}}"></o-course-article>
+            <view class="video" wx:if="{{((aindex+1)%3==0) && videoData[(((aindex+1)/3)-1)].videoUrl}}">
+                <!-- 视频图片层 -->
+                <view data-id="{{videoData[(((aindex+1)/3)-1)]._id}}" class="video-box" style="display: {{ _index == videoData[(((aindex+1)/3)-1)]._id ? 'none' : 'block' }};" bindtap="videoPlay">
+                    <image class="poster" src="{{videoData[(((aindex+1)/3)-1)].image_url}}" mode="aspectFit"></image>
+                    <!-- 视频按钮 -->
+                    <image class="playbtn" src="../../images/video/play.png" mode="scaleToFill"></image>
+                </view>
+                <!-- 视频播放层 -->
+                <video src="{{videoData[(((aindex+1)/3)-1)].videoUrl}}" data-id="{{videoData[(((aindex+1)/3)-1)]._id}}" class='video' wx:if="{{_index == videoData[(((aindex+1)/3)-1)]._id}}" objectFit='contain' autoplay='true' controls></video>
+                <view class="down-container">
+                    <view class="info-container">
+                        <text class="title">{{videoData[(((aindex+1)/3)-1)].title}}</text>
+                        <text class="content">{{videoData[(((aindex+1)/3)-1)].content}}</text>
+                    </view>
+                    <view class="collect-container">
+                        <view class="collect" wx:if="{{!(videoData[(((aindex+1)/3)-1)].collect_status)}}" data-id="{{videoData[(((aindex+1)/3)-1)]._id}}" bind:tap="doCollect">
+                            <image class="collect-img" src="../../images/video/collect.png" />
+                            <text class="collect-text">收藏</text>
+                        </view>
+                        <view class="collect" wx:if="{{videoData[(((aindex+1)/3)-1)].collect_status}}" data-id="{{videoData[(((aindex+1)/3)-1)]._id}}" bind:tap="deleteCollect">
+                            <image class="collect-img" src="../../images/video/collect@highlight.png" />
+                            <text class="collect-text">已收藏</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <!-- 课程分类栏 -->
+    <view class="type">
+        <view class="type-container" wx:if="{{!RorT}}">
+            <block wx:for="{{tagData}}" wx:key="">
+                <o-type class="type-box" logo="{{item.logo}}" tag="{{item.tag}}" bind:typeArticle="typeArticle"></o-type>
+            </block>
+        </view>
+    </view>
+    <view wx:if="{{loading}}" class="loading-container">
+        <o-loading class="loading"></o-loading>
+        <text>加载更多</text>
+    </view>
+</view>
+<view class="toTop" bind:tap="toTop">
+    <image class="toTop-img" src="../../images/tab/toTop.png" />
+</view>
+<o-search wx:if="{{searching}}" bind:cancel="backSearch" more="{{more}}"></o-search>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "o-search-little":"../../components/search-little/search",
+    "o-course-article":"../../components/course-article/course-article",
+    "o-loading":"../../components/loading/loading",
+    "o-search":"../../components/search/index"
+  },
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

@@ -1,0 +1,58 @@
+<!-- components/act/act.wxml -->
+<wxs src="../../utils/format.wxs" module="date" />
+<view class="container" id="qw">
+    <view wx:if="{{res.length === 0 && whereactivity=='list'}}" class="noAct">
+        <text>该地区暂时还没有活动，赶快发起吧！</text>
+    </view>
+    <view wx:if="{{res.length === 0 && whereactivity == 'myRealease'}}" class="noAct">
+        <text>未发起活动</text>
+    </view>
+    <view wx:if="{{res.length === 0 && whereactivity == 'participart' }}" class="noAct">
+        <text>未参加活动</text>
+    </view>
+    <view style="display: none">
+        <image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.pic}}" bindload="onImageLoad"></image>
+    </view>
+    <view wx:if="{{res.length !== 0}}" scroll-y="true" >
+        <view class="img_item">
+            <view class="activity" wx:for="{{col1}}" wx:key="id" bind:tap="activityDetails" data-activityid="{{res[item.shuzi].act._id}}">
+                <view>
+                    <image src="{{item.pic}}" class="image" style="width:100%;height:{{item.height}}px"></image>
+                </view>
+                <view class="activitytag">
+                    [{{res[item.shuzi].act.tag}}]   {{res[item.shuzi].act.title}}
+                </view>
+                <view class="activityintroduce">{{res[item.shuzi].act.detail}}</view>
+                <view class="activityIntroduces">
+                    <view class="activityName">
+                        <image src="{{res[item.shuzi].avatrUrl}}" class="portrait"></image>
+                        {{res[item.shuzi].nickName}}
+                    </view>
+                    <view class="activityTime">
+                        {{date.formatTime(res[item.shuzi].act.start_time) }} 开始
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="img_item">
+            <view class="activity" wx:for="{{col2}}" wx:key="id" bind:tap="activityDetails" data-activityid="{{res[item.shuzi].act._id}}">
+                <view>
+                    <image src="{{item.pic}}" class="image" style="width:100%;height:{{item.height}}px"></image>
+                </view>
+                <view class="activitytag">
+                    [{{res[item.shuzi].act.tag}}]   {{res[item.shuzi].act.title}}
+                </view>
+                <view class="activityintroduce">{{res[item.shuzi].act.detail}}</view>
+                <view class="activityIntroduces">
+                    <view class="activityName">
+                        <image src="{{res[item.shuzi].avatrUrl}}" class="portrait"></image>
+                        {{res[item.shuzi].nickName}}
+                    </view>
+                    <view class="activityTime">
+                        {{date.formatTime(res[item.shuzi].act.start_time) }}开始
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

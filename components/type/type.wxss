@@ -1,0 +1,13 @@
+.box{
+  margin-top: 60rpx;
+  width: 180rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size:38rpx;
+  
+}
+.img{
+  width: 176rpx;
+  height: 176rpx;
+}

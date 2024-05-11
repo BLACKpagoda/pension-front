@@ -1,0 +1,58 @@
+<view class='bigbox'>
+  <view class='header'>
+    <text class="title">[{{tag}}] {{title}}</text>
+    <view class="button" bind:tap="joinAct" wx:if="{{(status=='unJoin')?true:false}}">参加</view>
+    <view class="button" wx:if="{{(status=='join')?true:false}}">已参加</view>
+    <view class="button" bind:tap="deleteAct" wx:if="{{(status=='master')?true:false}}">删除</view>
+  </view>
+  <view class='me'>
+    <image class='img1' src="{{avatrUrl}}"></image>
+    <text>{{nickName}}</text>
+  </view>
+  <view class='date'>
+    <text class="text2">开始时间：{{start_time}}</text>
+    <text class="text2">结束时间：{{end_time}}</text>
+    <text class="text2">详细地点：{{detail_addr}}</text>
+  </view>
+  <view>
+    <view class='write'>{{detail}}</view>
+    <block wx:for="{{image_url}}" wx:key="">
+      <image class='img2' src="{{item}}" mode="widthFix" bindtap="previewImage" data-index="{{index}}"></image>
+    </block>
+  </view>
+  <view class='people'>
+    <view class='text2'>参加人数：{{join_num}}人</view>
+    <view class='text1' bind:tap="write">写留言</view>
+    <!-- <input hidden="{{true}}" auto-focus type="text"  /> -->
+    <input wx:if="{{false}}" auto-focus type="text" />
+  </view>
+  <view class='talk'>
+    <block wx:for="{{comment}}" wx:key="" wx:for-index="idx">
+      <view class="comment">
+        <image class='img1' src="{{item.comment_user_avatarUrl}}"></image>
+        <!-- 二级评论 -->
+        <view class="comment-container">
+          <view class='name'>{{item.comment_user_nickName}}</view>
+          <view bind:tap="goReply" data-id="{{item.comment_id}}" data-index="{{idx}}" data-rIndex="">{{item.content}}</view>
+          <view class="reply" wx:if="{{item.reply.length !== 0}}">
+            <block wx:for="{{item.reply}}" wx:key="" wx:for-index="idr">
+              <view class='name'>
+                <text class="rectangle"></text>
+                {{item.from_user_nickName}} 回复 {{item.to_user_nickName}}：
+              </view>
+              <view bind:tap="goReply" data-id="{{item.reply_id}}" data-index="{{idx}}" data-rIndex="{{idr}}">{{item.content}}</view>
+            </block>
+          </view>
+        </view>
+        <view class="writeText-container" wx:if="{{idx == index}}">
+          <textarea focus="{{true}}" type="text" class="writeText" placeholder="回复{{}}：" adjust-position placeholder-class="input-placeholder" auto-height="{{true}}" show-confirm-bar="{{false}}" bindinput="setMessage"/>
+          <text class="send" bind:tap="postReply">回复</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="writeText-container" wx:if="{{writeText}}">
+    <textarea focus="{{true}}" type="text" class="writeText" placeholder="请输入你的留言" bindblur="confirm" bindinput="setMessage" adjust-position placeholder-class="input-placeholder" auto-height="{{true}}" data-id="{{}}" show-confirm-bar="{{false}}" />
+    <text class="send" bind:tap="postComment">发布</text>
+  </view>
+</view>

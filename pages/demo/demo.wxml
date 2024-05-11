@@ -1,0 +1,85 @@
+<!-- pages/demo/demo.wxml -->
+<!-- <view class="container">
+  <view class="item1">asdasdasdas</view>
+  <view class="item2">asf</view>
+  <view class="item3">asffffffffffffffffffffffffffffffffffff</view>
+  <view class="item4">asffffffffffffffffffffasdasdasdsadsadsadsadasdsadsadadasdasddsasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddffffffffffffffffffffffffffffffffffffffffffffffffffffffff</view>
+</view> 
+<view class="waterfall">
+  
+  <view class="item">
+    <view class="item-content">
+      <image src="../../images/logo/logo.png" mode='widthFix' style="width:100%; border-radius: 16rpx 16rpx 0 0" />
+      <view class="des">
+        <text class="title">[太极]   太极之家</text>
+        <text class="content">各位极友来晋中大学城田森汇和我一起养生吧！</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-content">
+      <image src="../../images/img-f36eb1fcf25e1052aa801cf91ac7da68.png" mode='widthFix' style="width:100%; border-radius: 16rpx 16rpx 0 0" />
+      <view class="des">
+        <text class="title">[太极]   太极之家</text>
+        <text class="content">各位极友来晋中大学城田森汇和我一起养生吧！</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-content">
+      <image src="../../images/v2-b9d76346f596dc053e94f330a853d97c_hd.jpg" mode='widthFix' style="width:100%; border-radius: 16rpx 16rpx 0 0" />
+      <view class="des">
+        <text class="title">[太极]   太极之家</text>
+        <text class="content">各位极友来晋中大学城田森汇和我一起养生吧！</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-content">
+      <image src="../../images/v2-b9d76346f596dc053e94f330a853d97c_hd.jpg" mode='widthFix' style="width:100%; border-radius: 16rpx 16rpx 0 0" />
+      <view class="des">
+        <text class="title">[太极]   太极之家</text>
+        <text class="content">各位极友来晋中大学城田森汇和我一起养生吧！</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-content">
+      <image src="../../images/v2-ae56cf241db8631f6b8eeb4b8dc1d6fa_hd.jpg" mode='widthFix' style="width:100%; border-radius: 16rpx 16rpx 0 0" />
+      <view class="des">
+        <text class="title">[太极]   太极之家</text>
+        <text class="content">各位极友来晋中大学城田森汇和我一起养生吧！</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-content">
+      <image src="../../images/v2-ae56cf241db8631f6b8eeb4b8dc1d6fa_hd.jpg" mode='widthFix' style="width:100%; border-radius: 16rpx 16rpx 0 0" />
+      <view class="des">
+        <text class="title">[太极]   太极之家</text>
+        <text class="content">各位极友来晋中大学城田森汇和我一起养生吧！</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-content">
+      <image src="../../images/v2-ae56cf241db8631f6b8eeb4b8dc1d6fa_hd.jpg" mode='widthFix' style="width:100%; border-radius: 16rpx 16rpx 0 0" />
+      <view class="des">
+        <text class="title">[太极]   太极之家</text>
+        <text class="content">各位极友来晋中大学城田森汇和我一起养生吧！</text>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class="item-content">
+      <image src="../../images/v2-b9d76346f596dc053e94f330a853d97c_hd.jpg" mode='widthFix' style="width:100%; border-radius: 16rpx 16rpx 0 0" />
+      <view class="des">
+        <text class="title">[太极]   太极之家</text>
+        <text class="content">各位极友来晋中大学城田森汇和我一起养生吧！</text>
+      </view>
+    </view>
+  </view>
+</view> -->
+<!-- <o-course videoData="{{videoData}}" articleData="{{articleData}}" loading="{{loading}}" ></o-course> -->
+<!-- <o-act whereactivity="list" res="{{}}"></o-act> -->
+<image src="../../images/蒙版组 15.png" style="width: 200rpx; height: 200rpx" />

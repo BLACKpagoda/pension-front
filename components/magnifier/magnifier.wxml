@@ -1,0 +1,23 @@
+<!-- <cover-view class='box'>
+
+  <cover-view class='box1' bind:tap="maginfyFontSize">
+    <cover-image class='img1' src='image/plus-circle.png'></cover-image>
+    <cover-view class='button' class='text' >字体加大</cover-view>
+  </cover-view>
+    <cover-image class='return' src='image/返回.png'></cover-image>
+  <cover-view class='box1' bind:tap="shrinkFontSize">
+    <cover-image class='img1' src='image/minus-circle.png'></cover-image>
+    <cover-view class='text'>字体减小</cover-view>
+  </cover-view>
+
+</cover-view> -->
+<view class="container">
+  <view class="add">
+    <image class="add-img" src="./image/plus-circle.png"/>
+    <text class="add-text">放大字体</text>
+  </view>
+  <view class="reduce">
+    <image class="reduce-img" src="./image/minus-circle.png"/>
+    <text class="reduce-text">缩小字体</text>
+  </view>
+</view>

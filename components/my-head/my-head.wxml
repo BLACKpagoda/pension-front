@@ -1,0 +1,7 @@
+<!--components/my-head/my-head.wxml-->
+<view class="container">
+    <image class="img" src="{{userInfo.avatarUrl}}"/>
+    <view class="nickname">
+        <text class="text">{{userInfo.nickName}}</text>
+    </view>
+</view>

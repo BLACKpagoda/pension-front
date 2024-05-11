@@ -1,0 +1,171 @@
+.bigbox {
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  font-size: 40rpx;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px #FCFCFC solid ;
+  padding-bottom: 50rpx;
+}
+
+.title {
+  width: 460rpx;
+}
+
+.join {
+  width: 164rpx;
+  height: 60rpx;
+  border-radius: 80rpx;
+  border: 1px #d90000 solid;
+  color: #D90000;
+  text-align: center;
+}
+
+.me {
+  margin-top: 15rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.img1 {
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 50%;
+}
+
+.me text {
+  text-align: center;
+  margin-left: 30rpx;
+  line-height: 90rpx;
+
+}
+
+.date {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.img2 {
+  width: 100%;
+  border-radius: 12rpx;
+}
+
+.people {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px #FCFCFC solid;
+  padding-bottom: 20rpx;
+  width: 100%;
+}
+
+.text1 {
+  color: #D90000;
+}
+
+.text2 {
+  color: #73737A;
+}
+
+.talk {
+  margin-top: 30rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  margin-bottom: 40rpx;
+  display: flex;
+  border-bottom: 2px #FCFCFC solid;
+  flex-wrap: wrap;
+}
+
+.comment-container {
+  margin-bottom: 20rpx;
+  margin-left: 14rpx;
+  width: 544rpx;
+}
+
+.name {
+  color: #73737A;
+  position: relative;
+}
+
+.rectangle {
+  /* display: inline-block; */
+  position: absolute;
+  left: -14rpx;
+  top: 10rpx;
+  background-color: #D90000;
+  border-radius: 8rpx;
+  width: 10rpx;
+  height: 30rpx;
+}
+
+.reply {
+  width: 100%;
+  position: relative;
+}
+
+.write {
+  margin-top: 46rpx;
+  margin-bottom: 6rpx;
+  text-indent: 2rem;
+}
+
+.button {
+  border: 2rpx solid #d90000;
+  border-radius: 44rpx;
+  font-size: 36rpx;
+  line-height: 58rpx;
+  color: #D90000;
+  width:164rpx;
+  height: 60rpx;
+  text-align: center;
+  position: relative;
+  left: 8rpx;
+}
+
+.writeText {
+  margin-bottom: 30rpx;
+  width: 450rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  border: 1px solid #8F8F8F;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+}
+.writeText-container {
+  display: flex;
+  /* margin-bottom: 20rpx; */
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+.send {
+  width: 100rpx;
+  height: 60rpx;
+  border: 1px solid #D90000;
+  border-radius: 30rpx;
+  margin-bottom: 20rpx;
+  color: #D90000;
+  text-align: center;
+
+}
+
+.input-placeholder {
+  color: #73737A;
+  font-size: 36rpx;
+  line-height: 60rpx;
+}
+
+.multistage {
+  width: 100%;
+  position: absolute;
+  bottom: 0 ;
+}

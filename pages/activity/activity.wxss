@@ -1,0 +1,86 @@
+/* pages/activity/activity.wxss */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.fix {
+  background-color: white;
+  height: 300rpx;
+  position: fixed;
+  top: 0rpx;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.flexImg {
+  position: fixed;
+  bottom: 52rpx;
+  right: 50rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+
+
+
+.activitySearch {
+
+  text-align: center;
+  white-space: pre;
+  background-color: #DBDBDB;
+  width: 483rpx;
+  height: 81rpx;
+  border-radius: 60rpx;
+  color: #B2B2B2;
+  font-size: 34rpx;
+}
+
+.iconfonts {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+
+
+.activityClass {
+  width: 100%;
+  margin-top: 50rpx
+}
+
+.address {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.soso{
+    flex-grow:1;
+    height: 80rpx;
+    background-color: #dbdbdb;
+    border-radius:40rpx;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30rpx;
+}
+.icon{
+    width: 42rpx;
+    height: 42rpx;
+    margin-right: 7rpx;
+
+}
+.text{
+    font-size: 28rpx;
+    color: #b2b2b2;
+    margin-left: 7rpx;
+}

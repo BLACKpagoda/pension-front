@@ -1,0 +1,12 @@
+.box{
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.img{
+  width: 30rpx;
+  height: 30rpx;
+}
+.box text{
+  color: #707070;
+}

@@ -1,0 +1,65 @@
+/* components/my-option/my-option.wxss */
+.container{
+    display: flex;
+    flex-direction: row;
+    margin-top:34rpx;
+    margin-left: 22rpx;
+}
+.activity{
+    width: 110rpx;
+    height: 48rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 44rpx;
+    margin-right:66rpx;
+}
+.collection{
+    width: 110rpx;
+    height: 48rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.act-img{
+    width: 36rpx;
+    height: 36rpx;
+}
+.col-img{
+    width: 36rpx;
+    height: 36rpx;
+}
+.act-text{
+    font-size: 36rpx;
+}
+.col-text{
+    font-size: 36rpx;
+}
+.act-line{
+    background-color: #d90000;
+    border-radius: 16rpx;
+    width:44rpx;
+    height:8rpx;
+    margin-top:12rpx;
+    margin-right:20rpx;
+}
+.col-line{
+    background-color: #d90000;
+    border-radius: 16rpx;
+    width:44rpx;
+    height:8rpx;
+    margin-top:12rpx;
+    margin-right:20rpx;
+}
+.activity-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.collection-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

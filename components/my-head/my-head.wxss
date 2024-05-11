@@ -1,0 +1,24 @@
+/* components/my-head/my-head.wxss */
+.container {
+    height: 230rpx;
+    width: 100%;
+    border-bottom: 4rpx solid #dbdbdb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.img {
+    width: 144rpx;
+    height: 144rpx;
+    border-radius: 50%;
+    border: 6rpx solid #dbdbdb;
+    margin-left: 44rpx;
+    position: relative;
+}
+
+.nickname {
+    position: absolute;
+    left: 280rpx;
+    font-size: 40rpx;
+}

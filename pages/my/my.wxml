@@ -1,0 +1,84 @@
+<!-- pages/my/my.wxml -->
+<view>
+  <o-my-head userInfo="{{userInfo}}" wx:if="{{login}}"></o-my-head>
+  <o-my-option bind:switchMy="switchMyType" wx:if="{{login}}"></o-my-option>
+  <view class="header" wx:if="{{!login}}">
+    <view class="avatar">
+      <image src="{{default}}" />
+    </view>
+    <text class="nickName">未登录</text>
+  </view>
+  <view class="userinfo-container" wx:if="{{!login}}">
+    <text class="noLogin">暂未登录</text>
+    <text class="loginInfo">登录后查看个人信息</text>
+    <o-button class="login" bind:tap="toLogin">
+      <text slot="text">点击登录</text>
+    </o-button>
+  </view>
+  <view class="collection-container" wx:if="{{AorC&&login}}">
+    <!-- <view class="option1" bind:tap="realease">
+      我发布的
+      <image src="../../images/my/down.png" class="iconfonts drop-downIcon" wx:if="{{drop1}}"></image>
+      <image src="../../images/my/up.png" class="iconfonts drop-downIcon" wx:if="{{!drop1}}"></image>
+    </view>
+    <activity whereactivity="myRealease" wx:if="{{drop1}}" class="minRealease"></activity>
+    <view class="option2" bind:tap="participart">
+      我参加的
+      <image src="../../images/my/down.png" class="iconfonts drop-downIcon" wx:if="{{drop2}}"></image>
+      <image src="../../images/my/up.png" class="iconfonts drop-downIcon" wx:if="{{!drop2}}"></image>
+    </view>
+    <activity whereactivity="participart" wx:if="{{drop2}}" class="minParticipart"></activity> -->
+    <view class="option1" bind:tap="realease">
+      <text>我发布的</text>
+      <image src="{{drop1 ? '../../images/my/down.png' : '../../images/my/up.png'}}" />
+      <view style="width: 660rpx">
+      <activity whereactivity="myRealease" wx:if="{{drop1}}" class="minRealease"></activity>
+      </view>
+    </view>
+    <view class="line"></view>
+    <view class="option2" bind:tap="participart">
+      <text>我参加的</text>
+      <image src="{{drop2 ? '../../images/my/down.png' : '../../images/my/up.png'}}" />
+      <view style="width: 660rpx" >
+
+        <activity whereactivity="participart" wx:if="{{drop2}}" class="minParticipart"></activity>
+      </view>
+    </view>
+  </view>
+  <view class="collection-container" wx:if="{{(!AorC)&&login}}">
+    <view class="option1" bind:tap="onArticle">
+      <text>文章</text>
+      <image src="{{articleS?'../../images/my/down.png':'../../images/my/up.png'}}" />
+    </view>
+    <view class="article-list">
+      <block wx:if="{{articleS}}" wx:for="{{myArticleData}}" wx:for-item="article" wx:for-index="aindex" wx:key="aindex">
+        <o-course-article article="{{article}}"></o-course-article>
+      </block>
+    </view>
+    <view class="line"></view>
+    <view class="option2" bind:tap="onVideo">
+      <text>视频</text>
+      <image src="{{videoS?'../../images/my/down.png':'../../images/my/up.png'}}" />
+    </view>
+    <view wx:if="{{hideVideo}}">
+      <view class="video-list">
+        <block wx:if="{{videoS}}" wx:for="{{myVideoData}}" wx:key="index">
+          <!-- 视频图片层 -->
+          <view data-id="{{item._id}}" class="video-box" style="display: {{ _index == item._id ? 'none' : 'block' }};" bindtap="videoPlay">
+            <view>
+              <image class="poster" src="{{item.image_url}}" mode="aspectFit"></image>
+            </view>
+            <!-- 视频按钮 -->
+            <image class="playbtn" src="../../images/video/play.png" mode="scaleToFill"></image>
+          </view>
+          <!-- 视频播放层 -->
+          <video src="{{item.videoUrl}}" data-id="{{item._id}}" class='video' wx:if="{{_index == item._id}}" objectFit='contain' autoplay='true' controls></video>
+          <view class="info-container">
+            <text class="title">{{item.title}}</text>
+            <text class="content">{{item.content}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

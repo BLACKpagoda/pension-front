@@ -1,0 +1,22 @@
+/* components/search/search.wxss */
+.container{
+    width: 692rpx;
+    height: 80rpx;
+    background-color: #dbdbdb;
+    border-radius:40rpx;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    width: 42rpx;
+    height: 42rpx;
+    margin-right: 7rpx;
+
+}
+.text{
+    font-size: 28rpx;
+    color: #b2b2b2;
+    margin-left: 7rpx;
+}

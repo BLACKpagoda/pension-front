@@ -1,0 +1,12 @@
+<view class="course-container">
+  <block wx:for="{{articleData}}" wx:for-item="article" wx:for-index="aindex" wx:key="aindex">
+    <o-course-article article="{{article}}"></o-course-article>
+    <view class="video" wx:if="{{((aindex+1)%3==0) && videoData[(((aindex+1)/3)-1)].videoUrl}}">
+      <o-video videoData="{{videoData[(((aindex+1)/3)-1)]}}"></o-video>
+    </view>
+  </block>
+</view>
+<view class="loading-container" wx:if="{{loading}}">
+  <o-loading class="loading"></o-loading>
+  <text>加载更多</text>
+</view>

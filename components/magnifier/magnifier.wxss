@@ -1,0 +1,10 @@
+.container{
+  width:700rpx;
+  height: 500rpx;
+  background-color: #d90000;
+  border-radius: 24rpx;
+}
+.add-img,.reduce-img{
+  width: 50rpx;
+  height: 50rpx;
+}

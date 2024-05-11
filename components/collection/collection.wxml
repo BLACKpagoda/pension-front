@@ -1,0 +1,6 @@
+<view bind:tap="onCollection" class='box'>
+  <image class='img' src="{{judge?yes:no}}"></image>
+  <text>收藏</text>
+</view>
+
+

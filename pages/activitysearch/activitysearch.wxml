@@ -1,0 +1,15 @@
+<!--pages/activitysearch/activitysearch.wxml-->
+<view class="container">
+    <view class="search-container" wx:if="{{!isclass}}">
+        <search id="search" tag="act" bind:search="toSearch" bind:cancel="backSearch" bind:delete="delete" />
+    </view>
+    <view wx:if="{{hasData}}&&{{!isclass}}">
+        <activity whereactivity="search" keyword="{{keyword}}" more="{{more}}" bind:hasData="hasData"></activity>
+    </view>
+    <view wx:if="{{isclass}}">
+        <activity  tag="{{tag}}" whereactivity="actclass" ></activity>
+    </view>
+<!--    <view wx:if="{{loading}}" class="loading-container" bind:loading="getLoading">-->
+<!--        <o-loading class="loading"></o-loading>-->
+<!--    </view>-->
+</view>

@@ -1,0 +1,19 @@
+<!-- pages/actDesc/actDesc.wxml -->
+<view class="container">
+  <view class="headerPost">
+    <view bind:tap="onPost" class="onPost">完成</view>
+  </view>
+  <view class="input">
+    <textarea class="actDesc" type="text" value="{{desc == '请填写' ? '' : desc}}" maxlength="200" placeholder="请填写" adjust-position bindconfirm="" bindinput="setText" />
+  </view>
+  <view wx:if="{{images}}" class="image-father">
+    <view wx:for="{{images}}" wx:key="unique" class="previewImage">
+      <image src="{{item}}" data-index="{{index}}" class="uploadImage" bindtap="previewImage"></image>
+      <image src="../../images/cancel.png" data-index="{{index}}" class="delete" bind:tap="deleteImage"></image>
+    </view>
+  </view>
+  <view class="selectImage" bind:tap="selectImage">
+    <view class="row"></view>
+    <view class="column"></view>
+  </view>
+</view>

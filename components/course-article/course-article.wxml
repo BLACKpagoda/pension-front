@@ -1,0 +1,15 @@
+<!--components/course/course.wxml-->
+<view class="container" bind:tap="detail">
+    <view class="image">
+        <image mode="aspectFill" src="{{article.image_url}}" />
+    </view>
+    <view class="content">
+        <view class="up">
+            <text class="type-title">[{{article.tag}}] {{article.title}}</text>
+        </view>
+        <view class="down">
+            <text class="subTitle">转载自{{article.source}}</text>
+        </view>
+    </view>
+    <view class="shadow"></view>
+</view>

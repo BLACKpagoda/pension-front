@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "o-button": "../../components/text-button/index",
+    "o-my-head":"../../components/my-head/my-head",
+    "o-my-option":"../../components/my-option/my-option",
+    "o-course-article":"../../components/course-article/course-article",
+    "activity":"../../components/activity/activity"
+  },
+  "navigationBarTitleText": "个人中心",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

@@ -1,0 +1,19 @@
+/* pages/activitysearch/activitysearch.wxss */
+.search-container {
+    width: 692rpx;
+    margin: 12rpx auto 38rpx
+}
+.loading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    bottom: 10rpx;
+    left: 40%;
+}
+
+.loading-container text {
+    color: #A9A9A9;
+    font-size: 30rpx;
+    line-height: 40rpx;
+}

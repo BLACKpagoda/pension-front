@@ -1,0 +1,91 @@
+/* pages/addAct/addAct.wxss */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.avatar image {
+  width: 100rpx;
+  height: 104rpx;
+  border-radius: 50%;
+}
+
+.nickName {
+  margin-left: -20rpx;
+}
+
+.onPost {
+  width: 164rpx;
+  height: 60rpx;
+  border: 1px #D90000 solid;
+  border-radius: 30rpx;
+  color: #D90000;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 36rpx;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  width: 350rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.info {
+  width: 80%; 
+  height: 98rpx;
+  /* line-height: 98rpx; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px #FCFCFC solid;
+}
+
+.info image {
+  width: 14rpx;
+  height: 28rpx;
+}
+
+.tui-picker-detail {
+  width: 350rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fontColor {
+  color: #73737A;
+}
+/*.addressCounty{*/
+/*  width: 300rpx;*/
+/*}*/
+.location{
+  /*width: 450rpx;*/
+}
+
+.desc {
+  height: 300rpx;
+}
+
+.desc textarea {
+  height: 100%;
+}
+
+view.desc {
+  /* flex-direction: column; */
+  display: block;
+}
+
+.act-desc {
+  margin-bottom: 20rpx;
+  color: black;
+}

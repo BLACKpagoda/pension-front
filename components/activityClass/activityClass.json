@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "activity":"../activity/activity",
+    "o-type": "../type/type"
+  }
+}

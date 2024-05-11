@@ -1,0 +1,17 @@
+<!--components/menu-button/menu-button.wxml-->
+<view class="container">
+    <view class="recommend-container">
+        <view class="recommend {{shadow?'shadow-class':''}}" bind:tap="hideTLine">
+            <image class="recommend-image" src="./image/组 40.png" />
+            <text class="recommend-text">同城</text>
+        </view>
+        <view class="recommend-line" wx:if="{{!hide}}"></view>
+    </view>
+    <view class="type-container">
+        <view class="type {{shadow?'':'shadow-class'}}" bind:tap="hideRLine">
+            <text class="type-text">分类</text>
+            <image class="type-image" src="./image/分类.png"/>
+        </view>
+        <view class="type-line" wx:if="{{hide}}"></view>
+    </view>
+</view>

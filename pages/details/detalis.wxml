@@ -1,0 +1,25 @@
+<view class='detail'>
+  <text class='h2'>{{data.title}}</text>
+  <view class='box1'>
+    <text>来源：{{data.source}}</text>
+  </view>
+  <view>
+    <block wx:for="{{data.image_url}}" wx:key="">
+      <image class='img' src="{{item}}"></image>
+    </block>
+    <view class='content' style="font-size:{{fontSize}}">
+      {{data.content}}
+    </view>
+  </view>
+</view>
+<view class="collect" wx:if="{{collectStatus.status}}" bind:tap="deleteCollect">
+  <image src="{{collectStatus.img}}" />
+  <text>{{collectStatus.text}}</text>
+</view>
+<view class="collect" wx:if="{{!(collectStatus.status)}}">
+  <image src="{{collectStatus.img}}"  bind:tap="doCollect"/>
+  <text  bind:tap="doCollect">{{collectStatus.text}}</text>
+</view>
+<!-- <view class='magnifier' >
+  <o-magnifier bind:size="maginfyFontSize" />
+</view> -->

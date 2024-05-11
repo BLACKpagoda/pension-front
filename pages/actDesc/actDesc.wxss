@@ -1,0 +1,81 @@
+/* pages/actDesc/actDesc.wxss */
+
+.headerPost {
+  width: 94%;
+  display: flex;
+  /* flex-direction: row-reverse; */
+  justify-content: flex-end;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.onPost {
+  width: 164rpx;
+  height: 60rpx;
+  border: 1px #D90000 solid;
+  border-radius: 30rpx;
+  color: #D90000;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 36rpx;
+}
+
+.input {
+  margin-left: 42rpx;
+}
+
+.selectImage {
+  width: 200rpx;
+  height: 200rpx;
+  border: 4rpx #DBDBDB solid;
+  position: absolute;
+  bottom: 240rpx;
+  left: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  width: 144rpx;
+  height: 4rpx;
+  background-color: #DBDBDB;
+}
+
+.column {
+  height: 144rpx;
+  width: 4rpx;
+  background-color: #DBDBDB;
+  position: relative;
+  right: 72rpx;
+}
+
+.uploadImage {
+  width: 250rpx;
+  height: 250rpx;
+  z-index: 1;
+  border-radius: 20rpx;
+}
+
+.previewImage {
+  position: relative;
+  width: 30%;
+}
+
+.image-father {
+  display: flex;
+  justify-content: space-around;
+}
+
+.delete {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0;
+  right: -15rpx;
+  z-index: 999;
+}
+
+.image-father {
+  display: flex;
+}

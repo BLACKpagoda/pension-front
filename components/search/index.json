@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "o-label": "../label/index",
+    "o-loading": "../loading/loading",
+    "o-course-article": "../course-article/course-article"
+  }
+}

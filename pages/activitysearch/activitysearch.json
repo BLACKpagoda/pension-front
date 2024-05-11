@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search":"../../components/search/index",
+    "activity": "../../components/activity/activity",
+    "o-loading": "../../components/loading/loading"
+  }
+}

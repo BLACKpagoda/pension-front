@@ -1,0 +1,60 @@
+<!-- pages/addAct/addAct.wxml -->
+<view class="container">
+  <view class="header">
+    <view class="avatar">
+      <image src="{{avatarUrl}}" class="avatar" />
+    </view>
+    <text class="nickName">{{nickName}}</text>
+    <text bind:tap="onPost" class="onPost">发布</text>
+  </view>
+  <view class="info-container">
+    <view class="title info">
+      <text>标题：</text>
+      <view class="input">
+        <input type="text" placeholder="请输入标题" bindinput="setTitle" />
+      </view>
+    </view>
+    <view class="info">
+      <view class="tui-picker-name" data-id="1">开始时间：</view>
+      <o-timePicker pickerShow="{{isPickerShow1}}" id="picker" wx:if="{{isPickerRender1}}" bind:hidePicker="pickerHide" bind:setPickerTime="setTime" config="{{pickerConfig}}" data-id="1"></o-timePicker>
+      <text bind:tap="pickerShow" data-id="1">{{startTime}}</text>
+      <image src="../../images/right.png" />
+    </view>
+    <view class="info">
+      <view class="tui-picker-name">结束时间：</view>
+      <o-timePicker pickerShow="{{isPickerShow2}}" id="picker" wx:if="{{isPickerRender2}}" bind:hidePicker="pickerHide" bind:setPickerTime="setTime" config="{{pickerConfig}}" data-id="2"></o-timePicker>
+      <text bind:tap="pickerShow" data-id="2">{{endTime}}</text>
+      <image src="../../images/right.png" />
+    </view>
+    <view class=" info">
+      <text>活动类别：</text>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="input">
+          <text wx:if="{{!index}}" class="fontColor">请选择类别</text>
+          <text>{{array[index]}}</text>
+          <image src="../../images/right.png" />
+        </view>
+      </picker>
+    </view>
+    <view class=" info">
+      <text>活动地点：</text>
+      <view class="input">
+        <navigator class="location" url="../switchcity/switchcity">
+          <text wx:if="{{location}}">{{location}}{{county}}</text>
+          <text class="fontColor" wx:if="{{!location}}">选择地点</text>
+        </navigator>
+      </view>
+    </view>
+    <view class=" info">
+      <text>详细地址：</text>
+      <view class="input">
+        <input type="text" placeholder="请输入详细地址" bindinput="setDetailAddr" />
+      </view>
+    </view>
+    <view class="fontColor info desc" bind:tap="toDesc">
+      <!-- <text class="actDesc" type="" placeholder="{{desc}}" /> -->
+      <view class="act-desc">活动介绍：</view>
+      <text>{{desc ? desc : '请填写'}}</text>
+    </view>
+  </view>
+</view>

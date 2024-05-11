@@ -1,0 +1,79 @@
+/* components/act/act.wxss */
+.container{
+  height: auto;
+}
+.acticies{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 4rpx solid #707070
+}
+
+.img_item {
+  width: 46%;
+  margin: 2%;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #FCFCFC;
+  border-radius: 16rpx;
+}
+
+.image {
+  border-radius: 16rpx 16rpx 0 0;
+}
+
+
+.activityintroduce {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #73737A
+}
+
+.portrait {
+  width: 48rpx !important;
+  height: 48rpx !important;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.activityTime {
+  /* width: 220rpx; */
+  font-size: 24rpx;
+  color: #73737A
+}
+
+.activityName {
+  display: flex;
+  vertical-align: center;
+  font-size: 24rpx;
+  justify-content: start;
+  /*width: 140rpx;*/
+}
+
+.activityIntroduces {
+  margin-top: 16rpx;
+  margin-bottom: 16rpx;
+  line-height: 45rpx;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  vertical-align: center;
+  justify-content: space-between
+}
+
+/*.activitys{*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  stretch: child;*/
+/*  flex-start: child;*/
+/*  !*justify-content: space-between;*!*/
+/*  flex-wrap: wrap;*/
+/*  !*align-items:stretch ;*!*/
+/*}*/
+.noAct {
+  text-align: center;
+  height: 500rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
